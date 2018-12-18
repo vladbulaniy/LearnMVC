@@ -3,8 +3,14 @@
     //ViewBag.Title = "Index";
     Layout = null;
 }
+<div>
+    <h2>Index</h2>
 
-<h2>Index</h2>
+    <span>@ViewBag.Greering</span>
 
-<span>@ViewBag.Greering</span>
-
+    <p>
+        We're going to have an exciting party. <br />
+        (To do: sell it better. Add pictures or something)
+    </p>
+    @Html.ActionLink("RSVP Now", "RsvpForm")
+</div>
