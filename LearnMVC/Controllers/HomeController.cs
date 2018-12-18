@@ -9,9 +9,11 @@ namespace LearnMVC.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public string Index()
+        public ViewResult Index()
         {
-            return "Hello World";
+            int hour = DateTime.Now.Hour;
+            ViewBag.Greering = hour < 12 ? "Good morning" : "Good Afternoon";
+            return View();
         }
     }
 }
