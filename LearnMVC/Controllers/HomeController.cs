@@ -33,7 +33,17 @@ namespace LearnMVC.Controllers
                 Phone = "3435465534",
                 WillAttend = true
             };
-            return View("Thanks", temp);
+            if (ModelState.IsValid)
+            {
+                //TODO: Email response to the party organizer
+                return View("Thanks", guestResponse);
+            }
+            else
+            {
+                //there is validation error
+                return View();
+            }
+            
         }
     }
 }
